@@ -6,7 +6,7 @@ from rclpy.qos import QoSProfile, QoSDurabilityPolicy, QoSReliabilityPolicy, QoS
 import numpy as np
 import cv2
 from cv_bridge import CvBridge
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import Twist, Point
 
 class MinimalVideoSubscriber(Node):
 
@@ -36,8 +36,15 @@ class MinimalVideoSubscriber(Node):
         if pixel_coordinates is not None: 
             cx, image_center_x = pixel_coordinates
             point_msg = Point()
-            point_msg.cx = float(cx)
-            point_msg.image_center_x = float(image_center_x)
+            # point_msg.cx = float(cx)
+            # point_msg.image_center_x = float(image_center_x)
+            point_msg.x = float(cx)
+            point_msg.y = float(image_center_x)
+            point_msg.z = 0
+
+            self._point_publish.publish(point_msg)
+            self.get_logger().info(f"published pixel center and frame center {cx}, {image_center_x}")
+
 
     def find_object(self, frame):
         lower_color = np.array([40, 75, 75])
@@ -65,7 +72,7 @@ class MinimalVideoSubscriber(Node):
             
             image_center_x = frame.shape[1] // 2
 
-            return cx, image_center_x
+            return cx, image_center_x, x,y
 
 
 def main():
