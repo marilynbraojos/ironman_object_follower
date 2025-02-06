@@ -72,7 +72,7 @@ class MinimalVideoSubscriber(Node):
             
             image_center_x = frame.shape[1] // 2
 
-            return cx, image_center_x, x,y
+            return cx, image_center_x
 
 
 def main():
