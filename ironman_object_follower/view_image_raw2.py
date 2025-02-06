@@ -126,19 +126,20 @@ class MinimalVideoSubscriber(Node):
 			# cv2.namedWindow(self._titleOriginal, cv2.WINDOW_AUTOSIZE ) # Viewing Window
 			# cv2.moveWindow(self._titleOriginal, 50, 50) # Viewing Window Original Location
 		
-		# Set up QoS Profiles for passing images over WiFi
-		# image_qos_profile = QoSProfile(
-		#     reliability=QoSReliabilityPolicy.BEST_EFFORT,
-		#     history=QoSHistoryPolicy.KEEP_LAST,
-		#     durability=QoSDurabilityPolicy.VOLATILE,
-		#     depth=1
-		# )
+		#  Set up QoS Profiles for passing images over WiFi
+		image_qos_profile = QoSProfile(
+		    reliability=QoSReliabilityPolicy.BEST_EFFORT,
+		    history=QoSHistoryPolicy.KEEP_LAST,
+		    durability=QoSDurabilityPolicy.VOLATILE,
+		    depth=1
+		)
 
 		#Declare that the minimal_video_subscriber node is subcribing to the /camera/image/compressed topic.
 		self._video_subscriber = self.create_subscription(
 				CompressedImage,
 				'/image_raw/compressed',
-				self._image_callback)
+				self._image_callback, 
+				image_qos_profile)
 		self._video_subscriber # Prevents unused variable warning.
 		
 		# Create a publisher for velocity commands
