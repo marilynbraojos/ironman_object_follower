@@ -39,7 +39,7 @@ class VelocityPublisher(Node):
 
         if msg.x < msg.y - 50:
             twist.angular.z = 0.5
-        elif msg.x < msg.y  + 50:
+        elif msg.x > msg.y + 50:
             twist.angular.z = -0.5
         else:
             twist.angular.z = 0.0
