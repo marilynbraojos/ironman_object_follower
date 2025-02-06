@@ -1,0 +1,15 @@
+package.xml
+setup.cfg
+setup.py
+ironman_object_follower/__init__.py
+ironman_object_follower/find_object.py
+ironman_object_follower/view_image_raw.py
+ironman_object_follower/view_image_raw2.py
+ironman_object_follower.egg-info/PKG-INFO
+ironman_object_follower.egg-info/SOURCES.txt
+ironman_object_follower.egg-info/dependency_links.txt
+ironman_object_follower.egg-info/entry_points.txt
+ironman_object_follower.egg-info/requires.txt
+ironman_object_follower.egg-info/top_level.txt
+ironman_object_follower.egg-info/zip-safe
+resource/ironman_object_follower

@@ -1,0 +1,51 @@
+[4.535s] Invoking command in '/home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower': PYTHONPATH=/home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/prefix_override:/home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/build --no-deps install_data
+[5.998s] running develop
+[6.001s] /usr/local/lib/python3.10/dist-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[6.002s] !!
+[6.002s] 
+[6.002s]         ********************************************************************************
+[6.003s]         Please avoid running ``setup.py`` and ``easy_install``.
+[6.006s]         Instead, use pypa/build, pypa/installer or other
+[6.007s]         standards-based tools.
+[6.007s] 
+[6.009s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[6.009s]         ********************************************************************************
+[6.012s] 
+[6.013s] !!
+[6.013s]   easy_install.initialize_options(self)
+[6.136s] /usr/local/lib/python3.10/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[6.137s] !!
+[6.137s] 
+[6.137s]         ********************************************************************************
+[6.138s]         Please avoid running ``setup.py`` directly.
+[6.138s]         Instead, use pypa/build, pypa/installer or other
+[6.138s]         standards-based tools.
+[6.138s] 
+[6.139s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[6.139s]         ********************************************************************************
+[6.140s] 
+[6.141s] !!
+[6.141s]   self.initialize_options()
+[6.954s] running egg_info
+[6.955s] creating ironman_object_follower.egg-info
+[7.016s] writing ironman_object_follower.egg-info/PKG-INFO
+[7.017s] writing dependency_links to ironman_object_follower.egg-info/dependency_links.txt
+[7.018s] writing entry points to ironman_object_follower.egg-info/entry_points.txt
+[7.019s] writing requirements to ironman_object_follower.egg-info/requires.txt
+[7.019s] writing top-level names to ironman_object_follower.egg-info/top_level.txt
+[7.020s] writing manifest file 'ironman_object_follower.egg-info/SOURCES.txt'
+[7.150s] reading manifest file 'ironman_object_follower.egg-info/SOURCES.txt'
+[7.153s] writing manifest file 'ironman_object_follower.egg-info/SOURCES.txt'
+[7.219s] running build_ext
+[7.221s] Creating /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/python3.10/site-packages/ironman-object-follower.egg-link (link to .)
+[7.225s] Installing view_image_raw script to /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/ironman_object_follower
+[7.226s] Installing view_image_raw2 script to /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/ironman_object_follower
+[7.227s] 
+[7.227s] Installed /home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower
+[7.228s] running install_data
+[7.228s] creating /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/share/ament_index
+[7.229s] creating /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/share/ament_index/resource_index
+[7.230s] creating /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/share/ament_index/resource_index/packages
+[7.230s] copying resource/ironman_object_follower -> /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/share/ament_index/resource_index/packages
+[7.231s] copying package.xml -> /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/share/ironman_object_follower
+[7.397s] Invoked command in '/home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower' returned '0': PYTHONPATH=/home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/prefix_override:/home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/build --no-deps install_data
