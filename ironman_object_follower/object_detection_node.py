@@ -1,17 +1,18 @@
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import CompressedImage
 from rclpy.qos import QoSProfile, QoSDurabilityPolicy, QoSReliabilityPolicy, QoSHistoryPolicy
 
-import numpy as np
-import cv2
-from cv_bridge import CvBridge
+from sensor_msgs.msg import CompressedImage
 from geometry_msgs.msg import Twist, Point
 
-class MinimalVideoSubscriber(Node):
+import cv2
+from cv_bridge import CvBridge
+import numpy as np
+
+class ObjectDetectionNode(Node):
 
     def __init__(self):        
-        super().__init__('minimal_video_subscriber')
+        super().__init__('object_detection_node')
         
         image_qos_profile = QoSProfile(
             reliability=QoSReliabilityPolicy.BEST_EFFORT,
@@ -36,19 +37,17 @@ class MinimalVideoSubscriber(Node):
         if pixel_coordinates is not None: 
             cx, image_center_x = pixel_coordinates
             point_msg = Point()
-            # point_msg.cx = float(cx)
-            # point_msg.image_center_x = float(image_center_x)
             point_msg.x = float(cx)
             point_msg.y = float(image_center_x)
             point_msg.z = 0.0
 
             self._point_publish.publish(point_msg)
-            self.get_logger().info(f"published pixel center and frame center {cx}, {image_center_x}")
+            self.get_logger().info(f"Published pixel center {cx} and frame center {image_center_x}")
 
 
     def find_object(self, frame):
-        lower_color = np.array([40, 75, 75])
-        upper_color = np.array([80, 255, 255])
+        lower_color = np.array([40, 75, 75]) # green objects
+        upper_color = np.array([80, 255, 255]) # green objects
 
         hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
         bin_mask = cv2.inRange(hsv_frame, lower_color, upper_color)
@@ -74,18 +73,15 @@ class MinimalVideoSubscriber(Node):
 
             return cx, image_center_x
 
-
 def main():
     rclpy.init()
-    video_subscriber = MinimalVideoSubscriber()
-
+    video_subscriber = ObjectDetectionNode()
 
     while rclpy.ok():
         rclpy.spin_once(video_subscriber)
     
     video_subscriber.destroy_node()  
     rclpy.shutdown()
-
 
 if __name__ == '__main__':
     main()
