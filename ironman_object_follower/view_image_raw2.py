@@ -11,7 +11,7 @@ import numpy as np
 import cv2
 
 # Import the custom message (adjust the package name accordingly)
-from your_package_name.msg import DetectionPoint
+from ironman_object_follower.msg import DetectionPoint
 
 ###############################################################################
 # Object Detection Node: Processes images, detects an object, and publishes
