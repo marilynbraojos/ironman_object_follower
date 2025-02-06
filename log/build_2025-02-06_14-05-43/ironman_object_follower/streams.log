@@ -1,0 +1,39 @@
+[4.194s] Invoking command in '/home/burger/ros2_ws/src/ironman_object_follower': PYTHONPATH=/home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/prefix_override:/home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/ironman_object_follower build --build-base /home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/build install --record /home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/install.log --single-version-externally-managed
+[5.214s] running egg_info
+[5.282s] writing build/ironman_object_follower/ironman_object_follower.egg-info/PKG-INFO
+[5.284s] writing dependency_links to build/ironman_object_follower/ironman_object_follower.egg-info/dependency_links.txt
+[5.286s] writing entry points to build/ironman_object_follower/ironman_object_follower.egg-info/entry_points.txt
+[5.288s] writing requirements to build/ironman_object_follower/ironman_object_follower.egg-info/requires.txt
+[5.289s] writing top-level names to build/ironman_object_follower/ironman_object_follower.egg-info/top_level.txt
+[5.418s] reading manifest file 'build/ironman_object_follower/ironman_object_follower.egg-info/SOURCES.txt'
+[5.423s] writing manifest file 'build/ironman_object_follower/ironman_object_follower.egg-info/SOURCES.txt'
+[5.424s] running build
+[5.424s] running build_py
+[5.425s] copying ironman_object_follower/view_image_raw2.py -> /home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/build/lib/ironman_object_follower
+[5.428s] running install
+[5.429s] /usr/local/lib/python3.10/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[5.430s] !!
+[5.430s] 
+[5.431s]         ********************************************************************************
+[5.431s]         Please avoid running ``setup.py`` directly.
+[5.431s]         Instead, use pypa/build, pypa/installer or other
+[5.432s]         standards-based tools.
+[5.432s] 
+[5.433s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[5.433s]         ********************************************************************************
+[5.433s] 
+[5.434s] !!
+[5.434s]   self.initialize_options()
+[5.459s] running install_lib
+[5.523s] copying /home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/build/lib/ironman_object_follower/view_image_raw2.py -> /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/python3.10/site-packages/ironman_object_follower
+[5.527s] byte-compiling /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/python3.10/site-packages/ironman_object_follower/view_image_raw2.py to view_image_raw2.cpython-310.pyc
+[5.532s] running install_data
+[5.595s] running install_egg_info
+[5.669s] removing '/home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/python3.10/site-packages/ironman_object_follower-0.0.0-py3.10.egg-info' (and everything under it)
+[5.671s] Copying build/ironman_object_follower/ironman_object_follower.egg-info to /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/python3.10/site-packages/ironman_object_follower-0.0.0-py3.10.egg-info
+[5.677s] running install_scripts
+[6.347s] Installing vel_pub script to /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/ironman_object_follower
+[6.348s] Installing view_image_raw script to /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/ironman_object_follower
+[6.350s] Installing view_image_raw2 script to /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/ironman_object_follower
+[6.352s] writing list of installed files to '/home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/install.log'
+[6.514s] Invoked command in '/home/burger/ros2_ws/src/ironman_object_follower' returned '0': PYTHONPATH=/home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/prefix_override:/home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/ironman_object_follower build --build-base /home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/build install --record /home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/install.log --single-version-externally-managed

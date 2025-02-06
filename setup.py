@@ -20,9 +20,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'view_image_raw2 = ironman_object_follower.view_image_raw2:main',
-            'view_image_raw = ironman_object_follower.view_image_raw:main',
-            'vel_pub = ironman_object_follower.vel_pub:main',
+            'view_image_raw2=ironman_object_follower.view_image_raw2:main',
+            'view_image_raw=ironman_object_follower.view_image_raw:main',
+            'vel_pub=ironman_object_follower.vel_pub:main',
         ],
     },
 )

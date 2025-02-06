@@ -6,7 +6,7 @@ from rclpy.qos import QoSProfile, QoSDurabilityPolicy, QoSReliabilityPolicy, QoS
 import numpy as np
 import cv2
 from cv_bridge import CvBridge
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import Twist, Point
 
 class MinimalVideoSubscriber(Node):
 
@@ -27,11 +27,24 @@ class MinimalVideoSubscriber(Node):
             image_qos_profile)
         self._video_subscriber 
         
-        self._vel_publish = self.create_publisher(Twist, '/cmd_vel', 10)
+        self._point_publish = self.create_publisher(Point, 'detected_pixel', 10)
 
     def _image_callback(self, CompressedImage):    
         self._imgBGR = CvBridge().compressed_imgmsg_to_cv2(CompressedImage, "bgr8")
-        self.find_object(self._imgBGR)
+        pixel_coordinates = self.find_object(self._imgBGR)
+
+        if pixel_coordinates is not None: 
+            cx, image_center_x = pixel_coordinates
+            point_msg = Point()
+            # point_msg.cx = float(cx)
+            # point_msg.image_center_x = float(image_center_x)
+            point_msg.x = float(cx)
+            point_msg.y = float(image_center_x)
+            point_msg.z = 0
+
+            self._point_publish.publish(point_msg)
+            self.get_logger().info(f"published pixel center and frame center {cx}, {image_center_x}")
+
 
     def find_object(self, frame):
         lower_color = np.array([40, 75, 75])
@@ -58,32 +71,14 @@ class MinimalVideoSubscriber(Node):
                 continue
             
             image_center_x = frame.shape[1] // 2
-            if cx < image_center_x - 50:
-                self.publish_velocity(turn_left=True)
-            elif cx > image_center_x + 50:
-                self.publish_velocity(turn_right=True)
-            else:
-                self.publish_velocity(stop=True)
 
-    def publish_velocity(self, turn_left=False, turn_right=False, stop=False):
-        twist = Twist()
-        twist.linear.x = 0.0
-        twist.linear.y = 0.0
-        twist.linear.z = 0.0
-
-        if turn_left:
-            twist.angular.z = 0.5
-        elif turn_right:
-            twist.angular.z = -0.5
-        elif stop:
-            twist.angular.z = 0.0
-
-        self._vel_publish.publish(twist)
+            return cx, image_center_x
 
 
 def main():
     rclpy.init()
     video_subscriber = MinimalVideoSubscriber()
+
 
     while rclpy.ok():
         rclpy.spin_once(video_subscriber)

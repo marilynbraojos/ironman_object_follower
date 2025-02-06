@@ -10,6 +10,7 @@ build/ironman_object_follower/ironman_object_follower.egg-info/top_level.txt
 build/ironman_object_follower/ironman_object_follower.egg-info/zip-safe
 ironman_object_follower/__init__.py
 ironman_object_follower/find_object.py
+ironman_object_follower/vel_pub.py
 ironman_object_follower/view_image_raw.py
 ironman_object_follower/view_image_raw2.py
 resource/ironman_object_follower

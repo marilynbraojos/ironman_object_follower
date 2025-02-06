@@ -1,0 +1,111 @@
+[0.000000] (-) TimerEvent: {}
+[0.000628] (ironman_object_follower) JobQueued: {'identifier': 'ironman_object_follower', 'dependencies': OrderedDict()}
+[0.001054] (ironman_object_follower) JobStarted: {'identifier': 'ironman_object_follower'}
+[0.095866] (-) TimerEvent: {}
+[0.196564] (-) TimerEvent: {}
+[0.300514] (-) TimerEvent: {}
+[0.401685] (-) TimerEvent: {}
+[0.502619] (-) TimerEvent: {}
+[0.603341] (-) TimerEvent: {}
+[0.704153] (-) TimerEvent: {}
+[0.804858] (-) TimerEvent: {}
+[0.905679] (-) TimerEvent: {}
+[1.006611] (-) TimerEvent: {}
+[1.107232] (-) TimerEvent: {}
+[1.208022] (-) TimerEvent: {}
+[1.309598] (-) TimerEvent: {}
+[1.410219] (-) TimerEvent: {}
+[1.512345] (-) TimerEvent: {}
+[1.613355] (-) TimerEvent: {}
+[1.714045] (-) TimerEvent: {}
+[1.814840] (-) TimerEvent: {}
+[1.915537] (-) TimerEvent: {}
+[2.017988] (-) TimerEvent: {}
+[2.118637] (-) TimerEvent: {}
+[2.219253] (-) TimerEvent: {}
+[2.319875] (-) TimerEvent: {}
+[2.420506] (-) TimerEvent: {}
+[2.521130] (-) TimerEvent: {}
+[2.621818] (-) TimerEvent: {}
+[2.722607] (-) TimerEvent: {}
+[2.823273] (-) TimerEvent: {}
+[2.923922] (-) TimerEvent: {}
+[3.024576] (-) TimerEvent: {}
+[3.125174] (-) TimerEvent: {}
+[3.225813] (-) TimerEvent: {}
+[3.326561] (-) TimerEvent: {}
+[3.427253] (-) TimerEvent: {}
+[3.528022] (-) TimerEvent: {}
+[3.633969] (-) TimerEvent: {}
+[3.734640] (-) TimerEvent: {}
+[3.835292] (-) TimerEvent: {}
+[3.935965] (-) TimerEvent: {}
+[4.036846] (-) TimerEvent: {}
+[4.137532] (-) TimerEvent: {}
+[4.238209] (-) TimerEvent: {}
+[4.338877] (-) TimerEvent: {}
+[4.440606] (-) TimerEvent: {}
+[4.542097] (-) TimerEvent: {}
+[4.643382] (-) TimerEvent: {}
+[4.672764] (ironman_object_follower) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', 'build/ironman_object_follower', 'build', '--build-base', '/home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/build', 'install', '--record', '/home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/install.log', '--single-version-externally-managed'], 'cwd': '/home/burger/ros2_ws/src/ironman_object_follower', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'burger', 'SSH_CLIENT': '192.168.0.162 37434 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/burger/dontTouch_ws/install/v4l2_camera/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/burger', 'OLDPWD': '/home/burger/ros2_ws/src', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/burger/dontTouch_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'burger', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '85', 'AMENT_PREFIX_PATH': '/home/burger/dontTouch_ws/install/v4l2_camera:/home/burger/dontTouch_ws/install/turtlebot3:/home/burger/dontTouch_ws/install/turtlebot3_teleop:/home/burger/dontTouch_ws/install/turtlebot3_bringup:/home/burger/dontTouch_ws/install/turtlebot3_node:/home/burger/dontTouch_ws/install/turtlebot3_example:/home/burger/dontTouch_ws/install/turtlebot3_description:/home/burger/dontTouch_ws/install/ld08_driver:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.0.162 37434 192.168.0.158 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'LDS_MODEL': 'LDS-02', 'PYTHONPATH': '/home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/prefix_override:/home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/python3.10/site-packages:/home/burger/dontTouch_ws/build/turtlebot3_teleop:/home/burger/dontTouch_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/burger/dontTouch_ws/build/turtlebot3_example:/home/burger/dontTouch_ws/install/turtlebot3_example/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/burger/dontTouch_ws/install/v4l2_camera:/home/burger/dontTouch_ws/install/turtlebot3:/home/burger/dontTouch_ws/install/turtlebot3_bringup:/home/burger/dontTouch_ws/install/turtlebot3_node:/home/burger/dontTouch_ws/install/turtlebot3_description:/home/burger/dontTouch_ws/install/ld08_driver'}, 'shell': False}
+[4.743541] (-) TimerEvent: {}
+[4.844262] (-) TimerEvent: {}
+[4.945157] (-) TimerEvent: {}
+[5.046276] (-) TimerEvent: {}
+[5.147000] (-) TimerEvent: {}
+[5.247647] (-) TimerEvent: {}
+[5.348253] (-) TimerEvent: {}
+[5.456531] (-) TimerEvent: {}
+[5.557171] (-) TimerEvent: {}
+[5.658432] (-) TimerEvent: {}
+[5.678916] (ironman_object_follower) StdoutLine: {'line': b'running egg_info\n'}
+[5.739678] (ironman_object_follower) StdoutLine: {'line': b'writing build/ironman_object_follower/ironman_object_follower.egg-info/PKG-INFO\n'}
+[5.742013] (ironman_object_follower) StdoutLine: {'line': b'writing dependency_links to build/ironman_object_follower/ironman_object_follower.egg-info/dependency_links.txt\n'}
+[5.743260] (ironman_object_follower) StdoutLine: {'line': b'writing entry points to build/ironman_object_follower/ironman_object_follower.egg-info/entry_points.txt\n'}
+[5.744237] (ironman_object_follower) StdoutLine: {'line': b'writing requirements to build/ironman_object_follower/ironman_object_follower.egg-info/requires.txt\n'}
+[5.745252] (ironman_object_follower) StdoutLine: {'line': b'writing top-level names to build/ironman_object_follower/ironman_object_follower.egg-info/top_level.txt\n'}
+[5.758580] (-) TimerEvent: {}
+[5.859284] (-) TimerEvent: {}
+[5.867107] (ironman_object_follower) StdoutLine: {'line': b"reading manifest file 'build/ironman_object_follower/ironman_object_follower.egg-info/SOURCES.txt'\n"}
+[5.873097] (ironman_object_follower) StdoutLine: {'line': b"writing manifest file 'build/ironman_object_follower/ironman_object_follower.egg-info/SOURCES.txt'\n"}
+[5.873966] (ironman_object_follower) StdoutLine: {'line': b'running build\n'}
+[5.874574] (ironman_object_follower) StdoutLine: {'line': b'running build_py\n'}
+[5.881126] (ironman_object_follower) StdoutLine: {'line': b'running install\n'}
+[5.884270] (ironman_object_follower) StderrLine: {'line': b'/usr/local/lib/python3.10/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.\n'}
+[5.884879] (ironman_object_follower) StderrLine: {'line': b'!!\n'}
+[5.885183] (ironman_object_follower) StderrLine: {'line': b'\n'}
+[5.885491] (ironman_object_follower) StderrLine: {'line': b'        ********************************************************************************\n'}
+[5.885848] (ironman_object_follower) StderrLine: {'line': b'        Please avoid running ``setup.py`` directly.\n'}
+[5.886178] (ironman_object_follower) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[5.886486] (ironman_object_follower) StderrLine: {'line': b'        standards-based tools.\n'}
+[5.886793] (ironman_object_follower) StderrLine: {'line': b'\n'}
+[5.887089] (ironman_object_follower) StderrLine: {'line': b'        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.\n'}
+[5.887389] (ironman_object_follower) StderrLine: {'line': b'        ********************************************************************************\n'}
+[5.887678] (ironman_object_follower) StderrLine: {'line': b'\n'}
+[5.887999] (ironman_object_follower) StderrLine: {'line': b'!!\n'}
+[5.888290] (ironman_object_follower) StderrLine: {'line': b'  self.initialize_options()\n'}
+[5.905135] (ironman_object_follower) StdoutLine: {'line': b'running install_lib\n'}
+[5.959700] (-) TimerEvent: {}
+[5.980080] (ironman_object_follower) StdoutLine: {'line': b'running install_data\n'}
+[6.052052] (ironman_object_follower) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.059618] (-) TimerEvent: {}
+[6.117316] (ironman_object_follower) StdoutLine: {'line': b"removing '/home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/python3.10/site-packages/ironman_object_follower-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[6.119810] (ironman_object_follower) StdoutLine: {'line': b'Copying build/ironman_object_follower/ironman_object_follower.egg-info to /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/python3.10/site-packages/ironman_object_follower-0.0.0-py3.10.egg-info\n'}
+[6.128845] (ironman_object_follower) StdoutLine: {'line': b'running install_scripts\n'}
+[6.159783] (-) TimerEvent: {}
+[6.260434] (-) TimerEvent: {}
+[6.361932] (-) TimerEvent: {}
+[6.462687] (-) TimerEvent: {}
+[6.563379] (-) TimerEvent: {}
+[6.664092] (-) TimerEvent: {}
+[6.764703] (-) TimerEvent: {}
+[6.767462] (ironman_object_follower) StdoutLine: {'line': b'Installing view_image_raw script to /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/ironman_object_follower\n'}
+[6.770194] (ironman_object_follower) StdoutLine: {'line': b'Installing view_image_raw2 script to /home/burger/ros2_ws/src/ironman_object_follower/install/ironman_object_follower/lib/ironman_object_follower\n'}
+[6.772371] (ironman_object_follower) StdoutLine: {'line': b"writing list of installed files to '/home/burger/ros2_ws/src/ironman_object_follower/build/ironman_object_follower/install.log'\n"}
+[6.865060] (-) TimerEvent: {}
+[6.908547] (ironman_object_follower) CommandEnded: {'returncode': 0}
+[6.965162] (-) TimerEvent: {}
+[7.066165] (-) TimerEvent: {}
+[7.166604] (ironman_object_follower) JobEnded: {'identifier': 'ironman_object_follower', 'rc': 0}
+[7.168322] (-) TimerEvent: {}
+[7.169946] (-) EventReactorShutdown: {}
