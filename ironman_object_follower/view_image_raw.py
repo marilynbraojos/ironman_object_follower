@@ -96,7 +96,8 @@ class MinimalVideoSubscriber(Node):
 
 		# Display the processed frame with detections
 		if self._display_image:
-			cv2.imshow(self._titleOriginal, frame)		
+			cv2.imshow(self._titleOriginal, frame)	
+			self._user_input=cv2.waitKey(50) #Use OpenCV keystroke grabber for delay.	
 
 	# def show_image(self, img):
 	# 	cv2.imshow(self._titleOriginal, img)
