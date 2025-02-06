@@ -57,12 +57,51 @@ class MinimalVideoSubscriber(Node):
 		self._imgBGR = CvBridge().compressed_imgmsg_to_cv2(CompressedImage, "bgr8")
 		if(self._display_image):
 			# Display the image in a window
-			self.show_image(self._imgBGR)
+			# self.show_image(self._imgBGR)
+			self.find_object(self._imgBGR) # may not work 
 
-	def show_image(self, img):
-		cv2.imshow(self._titleOriginal, img)
-		# Cause a slight delay so image is displayed
-		self._user_input=cv2.waitKey(50) #Use OpenCV keystroke grabber for delay.
+	def find_object(self, frame):
+		# Color range for detecting green objects
+		lower_color = np.array([40, 75, 75])
+		upper_color = np.array([80, 255, 255])
+
+		# Convert frame captured to HSV color space
+		hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+		# Check if elements are within the specified color range and create binary mask
+		bin_mask = cv2.inRange(hsv_frame, lower_color, upper_color)
+
+		# Find contours
+		contours, _ = cv2.findContours(bin_mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+		# For all contours found
+		for contour in contours:
+			area = cv2.contourArea(contour)
+			if area < 2000:  # filter area of objects to detect
+				continue
+
+			x, y, w, h = cv2.boundingRect(contour)
+
+			mask_roi = bin_mask[y:y + h, x:x + w]
+			avg_intensity = np.mean(mask_roi) / 255.0
+
+			# If the contour's average intensity is too dark, skip it
+			if avg_intensity < 0.35:
+				continue
+
+			# Draw bounding box and label
+			cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+			cv2.putText(frame, f"Object Detected at Position: ({x}, {y})", (x, y - 10),
+						cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+
+		# Display the processed frame with detections
+		if self._display_image:
+			cv2.imshow(self._titleOriginal, frame)		
+
+	# def show_image(self, img):
+	# 	cv2.imshow(self._titleOriginal, img)
+	# 	# Cause a slight delay so image is displayed
+	# 	self._user_input=cv2.waitKey(50) #Use OpenCV keystroke grabber for delay.
 
 	def get_user_input(self):
 		return self._user_input
