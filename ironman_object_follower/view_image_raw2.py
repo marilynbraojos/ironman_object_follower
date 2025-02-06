@@ -40,7 +40,7 @@ class MinimalVideoSubscriber(Node):
             # point_msg.image_center_x = float(image_center_x)
             point_msg.x = float(cx)
             point_msg.y = float(image_center_x)
-            point_msg.z = 0
+            point_msg.z = 0.0
 
             self._point_publish.publish(point_msg)
             self.get_logger().info(f"published pixel center and frame center {cx}, {image_center_x}")
