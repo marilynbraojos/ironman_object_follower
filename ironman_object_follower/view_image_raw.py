@@ -107,7 +107,6 @@ class MinimalVideoSubscriber(Node):
 	def get_user_input(self):
 		return self._user_input
 
-
 def main():
 	rclpy.init() #init routine needed for ROS2.
 	video_subscriber = MinimalVideoSubscriber() #Create class object to be used.
